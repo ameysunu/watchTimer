@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State var hasStarted: Bool = false
-    @State var hours: Int = 00
-    @State var minutes: Int = 00
-    @State var seconds: Int = 00
+    @State var hours: Int = 0
+    @State var minutes: Int = 0
+    @State var seconds: Int = 0
     @State var timer: Timer? = nil
     @State var paused: Bool = false
     
     
     var body: some View {
         VStack{
-            Text("\(hours):\(minutes):\(seconds)")
+            Text(String(format: "%02d:%02d:%02d", hours, minutes, seconds))
                 .font(.title)
             
             HStack{
